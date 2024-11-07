@@ -10,9 +10,16 @@ require('dotenv').config();
 
 const app = express();
 
-const corsOptions = {
+/* const corsOptions = {
     origin: ['https://happening-in-agra.vercel.app', 'https://happeninginagra.com'],
     methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
+    credentials: true,
+}; */
+// Configure CORS
+const corsOptions = {
+    origin: ['https://happening-in-agra.vercel.app', 'https://happeninginagra.com'],
+    methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+    allowedHeaders: ['Content-Type', 'Authorization'],
     credentials: true,
 };
 
