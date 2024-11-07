@@ -15,6 +15,8 @@ const app = express();
     methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
     credentials: true,
 }; */
+
+
 // Configure CORS
 const corsOptions = {
     origin: ['https://happening-in-agra.vercel.app', 'https://happeninginagra.com'],
