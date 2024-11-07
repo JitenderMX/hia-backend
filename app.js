@@ -9,12 +9,12 @@ const {
 require('dotenv').config();
 
 const app = express();
-// Configure CORS to allow requests from your specific frontend URL
+
 const corsOptions = {
-    origin: ['https://happening-in-agra.vercel.app', 'https://happeninginagra.com'], // allow both origins
+    origin: ['https://happening-in-agra.vercel.app', 'https://happeninginagra.com'],
     methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
     credentials: true,
-  };
+};
 
 app.use(cors(corsOptions));
 
