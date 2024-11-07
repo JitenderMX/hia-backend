@@ -9,7 +9,14 @@ const {
 require('dotenv').config();
 
 const app = express();
-app.use(cors());
+// Configure CORS to allow requests from your specific frontend URL
+const corsOptions = {
+    origin: 'https://happening-in-agra.vercel.app', // allow only your Vercel frontend
+    methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
+    credentials: true,
+  };
+
+app.use(cors(corsOptions));
 app.use(express.json());
 app.use(express.urlencoded({
     extended: true
